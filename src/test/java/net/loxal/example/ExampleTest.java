@@ -26,9 +26,10 @@ public class ExampleTest {
     private static final Logger LOG = LoggerFactory.getLogger(ExampleTest.class);
     static List<Character> unsortedCharacters;
     static List<Character> sortedCharacters;
+    private final Example example = new Example();
 
     private static List<Character> createCharacters() {
-        char[] randomChars = RandomStringUtils.random(1234567, "abcdefghijklmnopqrstuvwxyz").toCharArray();
+        char[] randomChars = RandomStringUtils.random(1234, "abcdefghijklmnopqrstuvwxyz").toCharArray();
         List<Character> randomCharacters = Arrays.asList(ArrayUtils.toObject(randomChars));
         List<Character> characters = new LinkedList<>();
         characters.add('z');
@@ -60,7 +61,7 @@ public class ExampleTest {
         LOG.info("@BeforeClass");
         unsortedCharacters = createCharacters();
 
-        sortedCharacters = unsortedCharacters;
+        sortedCharacters = new LinkedList<>(unsortedCharacters);
         Collections.sort(sortedCharacters);
     }
 
@@ -75,10 +76,13 @@ public class ExampleTest {
 
     @Test
     public void sortUsingBubleSort() throws Exception {
-        Example example = new Example();
         Method sort = Example.class.getDeclaredMethod("sortUsingBubbleSort", List.class);
         Character[] characters = (Character[]) sort.invoke(example, unsortedCharacters);
 
+        verifySortOrder(characters);
+    }
+
+    private void verifySortOrder(Character[] characters) {
         assertEquals(sortedCharacters, Arrays.asList(characters));
         assertArrayEquals(sortedCharacters.toArray(), Arrays.asList(characters).toArray());
     }
@@ -89,8 +93,7 @@ public class ExampleTest {
         Method sort = Example.class.getDeclaredMethod("sortUsingImprovedBubbleSort", List.class);
         Character[] characters = (Character[]) sort.invoke(example, unsortedCharacters);
 
-        assertEquals(sortedCharacters, Arrays.asList(characters));
-        assertArrayEquals(sortedCharacters.toArray(), Arrays.asList(characters).toArray());
+        verifySortOrder(characters);
     }
 
 }
