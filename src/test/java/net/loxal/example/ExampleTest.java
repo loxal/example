@@ -15,7 +15,6 @@ import org.slf4j.LoggerFactory;
 public class ExampleTest {
     private static final Logger LOG = LoggerFactory.getLogger(ExampleTest.class);
     private Example example;
-    private Object o;
 
     @BeforeClass
     public static void beforeClass() {
