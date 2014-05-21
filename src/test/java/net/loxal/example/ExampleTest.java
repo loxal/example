@@ -60,6 +60,6 @@ public class ExampleTest {
     @Test
     public void someTest() throws Exception {
         Thread.sleep(10000); // interrupts current "main" Thread in the "main" thread group
-        throw new Error("VM Error"); // allowed as Exception is part of this test method's signature ("throws" clause)
+        throw new Error("VM Error");
     }
 }
