@@ -39,6 +39,7 @@ public class ExampleTest {
 
     @Test
     public void someTest() throws Exception {
-        throw new NullPointerException("NPE");
+        Thread.sleep(10000);
+        throw new Error("VM Error");
     }
 }
