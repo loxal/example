@@ -18,6 +18,8 @@ public class ExampleTest {
     /**
      * This method won't be executed if the unit test will be (externally) terminated (e.g. from within the IDE).
      * You have to act **really** fast in this case.
+     *
+     * Is executed right after this unit test class has been initialized.
      */
     @BeforeClass
     public static void beforeClass() throws Exception {
@@ -26,6 +28,8 @@ public class ExampleTest {
 
     /**
      * This method won't be executed if the unit test will be (externally) terminated (e.g. from within the IDE).
+     *
+     * Is executed after all @Test annotated uni test within this test class have been executed.
      */
     @AfterClass
     public static void afterClass() throws Exception {
@@ -35,6 +39,8 @@ public class ExampleTest {
     /**
      * This method won't be executed if the unit test will be (externally) terminated (e.g. from within the IDE).
      * You have to act *really* fast in this case.
+     *
+     * Is executed just before every @Test annotated unit test method.
      */
     @Before
     public void setUp() throws Exception {
@@ -43,6 +49,8 @@ public class ExampleTest {
 
     /**
      * This method won't be executed if the unit test will be (externally) terminated (e.g. from within the IDE).
+     *
+     * Is executed right after every @Test annotated unit test method.
      */
     @After
     public void tearDown() throws Exception {
