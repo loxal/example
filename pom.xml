@@ -13,14 +13,14 @@
     <description>Best practices project</description>
 
     <artifactId>example</artifactId>
-    <version>1.0.0.1</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
     <name>Example</name>
 
     <parent>
         <groupId>loxal</groupId>
         <artifactId>meta</artifactId>
-        <version>1.0.0.1</version>
+        <version>1.0.1</version>
         <relativePath>../meta</relativePath>
     </parent>
 
