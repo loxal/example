@@ -8,11 +8,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import java.util.logging.Logger;
 
 public class ExampleTest {
-    private static final Logger LOG = LoggerFactory.getLogger(ExampleTest.class);
+    public static final Logger LOG = Logger.getGlobal();
     private final Example example = new Example();
 
     @BeforeClass

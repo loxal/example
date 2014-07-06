@@ -4,11 +4,10 @@
 
 package net.loxal.example;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.logging.Logger;
 
 public class Example {
-    private static final Logger LOG = LoggerFactory.getLogger(Example.class);
+    public static final Logger LOG = Logger.getGlobal();
 
     public Example() {
     }
