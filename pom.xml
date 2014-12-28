@@ -20,8 +20,8 @@
     <parent>
         <groupId>loxal</groupId>
         <artifactId>meta</artifactId>
-        <version>1.0.1</version>
-        <relativePath>../meta</relativePath>
+        <version>1.2.1</version>
+        <relativePath>../rest-kit/meta-pom.xml</relativePath>
     </parent>
 
     <properties>
