@@ -10,8 +10,7 @@
     <parent>
         <groupId>net.loxal</groupId>
         <artifactId>meta</artifactId>
-        <version>1.2.2</version>
-        <relativePath>../loxal/pom.xml</relativePath>
+        <version>1.2.4</version>
     </parent>
 
     <artifactId>example</artifactId>
@@ -55,6 +54,10 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.1</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
         </dependency>
     </dependencies>
 
