@@ -13,7 +13,7 @@
 </a></span>
 <!-- /BADGES -->
 
-Example
+Template
 =
 
 Sample code snippets, experiments, and proof-of-concepts
