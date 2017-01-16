@@ -1,8 +1,8 @@
 /*
- * Copyright 2014 Alexander Orlov <alexander.orlov@loxal.net>. All rights reserved.
+ * Copyright 2017 Alexander Orlov <alexander.orlov@loxal.net>. All rights reserved.
  */
 
-package net.loxal.example;
+package net.loxal.template;
 
 import org.junit.After;
 import org.junit.Before;
@@ -11,9 +11,9 @@ import org.junit.Test;
 
 import java.util.logging.Logger;
 
-public class ExampleTest {
+public class TemplateTest {
     public static final Logger LOG = Logger.getGlobal();
-    private final Example example = new Example();
+    private final Template template = new Template();
 
     @BeforeClass
     public static void beforeClass() {
