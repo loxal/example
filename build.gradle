@@ -5,7 +5,14 @@
 buildscript {
     repositories {
         mavenCentral()
+        maven {
+            url 'https://plugins.gradle.org/m2'
+        }
     }
+}
+
+plugins {
+    id 'me.champeau.gradle.jmh' version '0.3.1'
 }
 
 apply plugin: 'java'
@@ -19,5 +26,10 @@ repositories {
 }
 
 dependencies {
+    testCompile 'org.openjdk.jmh:jmh-generator-annprocess:1.17.4'
     testCompile 'junit:junit:4.12'
+}
+
+jmh {
+    fork = 0
 }

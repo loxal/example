@@ -8,12 +8,14 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openjdk.jmh.annotations.Benchmark;
+import org.openjdk.jmh.annotations.BenchmarkMode;
+import org.openjdk.jmh.annotations.Mode;
 
 import java.util.logging.Logger;
 
 public class TemplateTest {
-    public static final Logger LOG = Logger.getGlobal();
-    private final Template template = new Template();
+    private static final Logger LOG = Logger.getGlobal();
 
     @BeforeClass
     public static void beforeClass() {
@@ -29,8 +31,10 @@ public class TemplateTest {
     public void tearDown() throws Exception {
     }
 
+    @Benchmark
+    @BenchmarkMode(Mode.SingleShotTime)
     @Test
     public void someTest() throws Exception {
-
+        LOG.info("Some Text");
     }
 }
