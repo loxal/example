@@ -12,11 +12,11 @@ buildscript {
 }
 
 plugins {
-    id 'me.champeau.gradle.jmh' version '0.3.1'
+    id "me.champeau.gradle.jmh" version "0.3.1"
 }
 
-apply plugin: 'java'
-apply plugin: 'idea'
+apply plugin: "java"
+apply plugin: "idea"
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
@@ -26,8 +26,8 @@ repositories {
 }
 
 dependencies {
-    testCompile 'org.openjdk.jmh:jmh-generator-annprocess:1.17.4'
-    testCompile 'junit:junit:4.12'
+    testCompile "org.openjdk.jmh:jmh-generator-annprocess:1.17.4"
+    testCompile "junit:junit:4.12"
 }
 
 jmh {
